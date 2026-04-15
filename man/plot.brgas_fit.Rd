@@ -30,8 +30,7 @@ Plots returns and the fitted conditional scale from a \code{brgas_fit} object.
 The fitted object, invisibly.
 }
 \examples{
-sample_df <- sample_hbea_data()
+sample_df <- sample_data()
 fit <- fit_brgast(sample_df$ret, sample_df$post_break)
 plot(fit, dates = sample_df$date)
 }
-

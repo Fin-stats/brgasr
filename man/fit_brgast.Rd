@@ -33,7 +33,7 @@ An object of class \code{"brgas_fit"} containing coefficients, fit statistics,
 filtered states, and the original inputs.
 }
 \examples{
-sample_df <- sample_hbea_data()
+sample_df <- sample_data()
 fit <- fit_brgast(sample_df$ret, sample_df$post_break)
 print(fit)
 }

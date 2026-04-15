@@ -17,7 +17,7 @@ reference:
       - roll_brgast
   - title: Data and simulation
     contents:
-      - sample_hbea_data
+      - sample_data
       - simulate_brgast
   - title: Evaluation and plots
     contents:

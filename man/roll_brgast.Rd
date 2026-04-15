@@ -29,8 +29,7 @@ roll_brgast(
 A list with \code{forecasts} and \code{evaluation}.
 }
 \examples{
-sample_df <- sample_hbea_data()
+sample_df <- sample_data()
 roll_out <- roll_brgast(sample_df, win = 250, refit_every = 20, tau = c(0.05, 0.01))
 head(roll_out$forecasts)
 }
-

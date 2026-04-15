@@ -1,4 +1,4 @@
-sample_hbea_data <- function() {
+sample_data <- function() {
   path <- system.file("extdata", "hbea_sample.csv", package = "brgasr")
   if (path == "") {
     stop("Bundled sample data not found.", call. = FALSE)

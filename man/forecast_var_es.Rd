@@ -17,8 +17,7 @@ forecast_var_es(object, tau = c(0.1, 0.05, 0.01), state = NULL)
 A data frame with columns \code{tau}, \code{var}, and \code{es}.
 }
 \examples{
-sample_df <- sample_hbea_data()
+sample_df <- sample_data()
 fit <- fit_brgast(sample_df$ret, sample_df$post_break)
 forecast_var_es(fit, tau = c(0.10, 0.05, 0.01))
 }
-

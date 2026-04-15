@@ -1,6 +1,6 @@
 library(brgasr)
 
-sample_df <- sample_hbea_data()
+sample_df <- sample_data()
 
 fit <- fit_brgast(
   y = sample_df$ret,
