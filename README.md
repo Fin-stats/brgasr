@@ -11,12 +11,11 @@ The package is intentionally narrow in scope:
 
 - It helps users fit the **core BR-GAS-t model**.
 - It supports **one-step-ahead VaR and ES forecasting**.
-- It includes a **bundled 10-year sample dataset** so users can try the model
+- It includes a **10-year sample dataset** so users can try the model
   immediately.
 - It includes **built-in visualization functions** for fitted scale dynamics and
   VaR forecast paths.
-- It does **not** attempt to reproduce the full paper, the full data pipeline,
-  or every benchmark table.
+
 
 ## Current package structure
 
