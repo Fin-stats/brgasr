@@ -68,7 +68,7 @@ filter_brgast <- function(y, indicator, params, return_path = TRUE) {
   out
 }
 
-fit_brgast <- function(y, indicator, start = NULL) {
+fit_brgast <- function(y, indicator, start = NULL, control = list(maxit = 1500)) {
   validated <- validate_brgas_inputs(y, indicator)
   y <- validated$y
   indicator <- validated$indicator
@@ -92,7 +92,7 @@ fit_brgast <- function(y, indicator, start = NULL) {
     -filt$llk
   }
 
-  fit <- optim_with_fallback(start, objective, control = list(maxit = 1500))
+  fit <- optim_with_fallback(start, objective, control = control)
   params <- map_brgas_params(fit$par)
   filtered <- filter_brgast(y, indicator, params, return_path = TRUE)
   out <- list(

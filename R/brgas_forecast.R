@@ -53,6 +53,8 @@ roll_brgast <- function(data,
                         win = 250,
                         refit_every = 20,
                         tau = c(0.10, 0.05, 0.01),
+                        warm_start = TRUE,
+                        fit_control = list(maxit = 600),
                         ret_col = "ret",
                         indicator_col = "post_break",
                         date_col = "date") {
@@ -73,13 +75,24 @@ roll_brgast <- function(data,
   rec_id <- 1L
   current_fit <- NULL
   current_state <- NULL
+  current_start <- NULL
 
   for (j in seq_along(oos_idx)) {
     idx <- oos_idx[j]
     if (j == 1L || ((j - 1L) %% refit_every) == 0L || is.null(current_fit)) {
       train_idx <- seq.int(idx - win, idx - 1L)
-      current_fit <- fit_brgast(y[train_idx], indicator[train_idx])
+      current_fit <- fit_brgast(
+        y[train_idx],
+        indicator[train_idx],
+        start = current_start,
+        control = fit_control
+      )
       current_state <- current_fit$fitted$next_state
+      if (isTRUE(warm_start)) {
+        current_start <- current_fit$raw
+      } else {
+        current_start <- NULL
+      }
     }
 
     fc <- forecast_var_es(current_fit, tau = tau, state = current_state)

@@ -64,7 +64,7 @@ sample_df <- sample_data()
 roll_out <- roll_brgast(
   data = sample_df,
   win = 250,
-  refit_every = 20,
+  refit_every = 60,
   tau = c(0.05, 0.01)
 )
 
@@ -72,6 +72,9 @@ head(roll_out$forecasts)
 roll_out$evaluation
 plot_var_es_forecasts(roll_out$forecasts, tau = 0.05)
 ```
+
+Rolling forecasts use warm starts by default so that re-estimation remains
+practical on longer samples.
 
 ## Sample data
 

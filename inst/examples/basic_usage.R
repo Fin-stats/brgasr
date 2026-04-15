@@ -18,7 +18,7 @@ plot(fit, dates = sample_df$date)
 roll_out <- roll_brgast(
   data = sample_df,
   win = 250,
-  refit_every = 20,
+  refit_every = 60,
   tau = c(0.05, 0.01)
 )
 
