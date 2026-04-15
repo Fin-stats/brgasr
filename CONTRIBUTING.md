@@ -1,6 +1,6 @@
-# Contributing to brgasr
+# Contributing to brgast
 
-Thanks for your interest in improving `brgasr`.
+Thanks for your interest in improving `brgast`.
 
 ## Scope
 

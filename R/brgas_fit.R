@@ -117,7 +117,7 @@ coef.brgas_fit <- function(object, ...) {
 }
 
 print.brgas_fit <- function(x, ...) {
-  cat("brgasr fit\n")
+  cat("brgast fit\n")
   cat(sprintf("  Observations: %s\n", x$n))
   cat(sprintf("  Log-likelihood: %.3f\n", x$loglik))
   cat(sprintf("  AIC: %.3f\n", x$aic))
@@ -146,7 +146,7 @@ summary.brgas_fit <- function(object, ...) {
 }
 
 print.summary_brgas_fit <- function(x, ...) {
-  cat("Summary of brgasr fit\n")
+  cat("Summary of brgast fit\n")
   cat(sprintf("  Converged: %s\n\n", if (isTRUE(x$converged)) "yes" else "no"))
   print(x$coefficients, row.names = FALSE)
   cat("\n")

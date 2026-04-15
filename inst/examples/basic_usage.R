@@ -1,4 +1,4 @@
-library(brgasr)
+library(brgast)
 
 sample_df <- sample_data()
 

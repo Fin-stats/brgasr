@@ -1,9 +1,9 @@
-\name{brgasr-package}
-\alias{brgasr-package}
-\alias{brgasr}
-\title{brgasr: Break-Regime GAS Models for Tail-Risk Forecasting}
+\name{brgast-package}
+\alias{brgast-package}
+\alias{brgast}
+\title{brgast: Break-Regime GAS Models for Tail-Risk Forecasting}
 \description{
-The \pkg{brgasr} package implements a break-regime generalized autoregressive
+The \pkg{brgast} package implements a break-regime generalized autoregressive
 score model with Student-t innovations for one-step-ahead Value-at-Risk and
 Expected Shortfall forecasting. It also provides rolling forecasting, sample
 data access, simulation helpers, and built-in visualization functions.

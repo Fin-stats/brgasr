@@ -1,8 +1,8 @@
-url: https://fin-stats.github.io/brgasr/
+url: https://fin-stats.github.io/brgast/
 template:
   bootstrap: 5
 home:
-  title: brgasr
+  title: brgast
   description: Break-regime GAS models for tail-risk forecasting
 navbar:
   structure:

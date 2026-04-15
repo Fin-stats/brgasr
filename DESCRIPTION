@@ -1,4 +1,4 @@
-Package: brgasr
+Package: brgast
 Type: Package
 Title: Break-Regime Generalized Autoregressive Score Models for Tail Risk
 Version: 0.1.0
@@ -19,5 +19,5 @@ LazyData: false
 RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1.0)
-URL: https://github.com/Fin-stats/brgasr
-BugReports: https://github.com/Fin-stats/brgasr/issues
+URL: https://github.com/Fin-stats/brgast
+BugReports: https://github.com/Fin-stats/brgast/issues

@@ -1,6 +1,6 @@
-# brgasr
+# brgast
 
-`brgasr` is a lightweight R package for fitting the break-regime generalized
+`brgast` is a lightweight R package for fitting the break-regime generalized
 autoregressive score model with Student-t innovations used in our carbon-market
 tail-risk study.
 
@@ -29,19 +29,19 @@ After pushing this folder to GitHub, installation can be done with:
 
 ```r
 # install.packages("remotes")
-remotes::install_github("Fin-stats/brgasr")
+remotes::install_github("Fin-stats/brgast")
 ```
 
 For local installation from this folder:
 
 ```r
-install.packages("path/to/brgasr", repos = NULL, type = "source")
+install.packages("path/to/brgast", repos = NULL, type = "source")
 ```
 
 ## Quick start
 
 ```r
-library(brgasr)
+library(brgast)
 
 sample_df <- sample_data()
 
@@ -68,7 +68,7 @@ Typical one-step-ahead output on the bundled sample data:
 ## Rolling forecast example
 
 ```r
-library(brgasr)
+library(brgast)
 
 sample_df <- sample_data()
 

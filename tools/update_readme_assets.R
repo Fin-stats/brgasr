@@ -6,7 +6,7 @@ setwd(pkg_root)
 
 .libPaths(c(normalizePath(file.path(pkg_root, "..", ".Rlib"), winslash = "/"), .libPaths()))
 
-library(brgasr)
+library(brgast)
 
 dir.create("man/figures", showWarnings = FALSE, recursive = TRUE)
 

@@ -1,5 +1,5 @@
 sample_data <- function() {
-  path <- system.file("extdata", "hbea_sample.csv", package = "brgasr")
+  path <- system.file("extdata", "hbea_sample.csv", package = "brgast")
   if (path == "") {
     stop("Bundled sample data not found.", call. = FALSE)
   }

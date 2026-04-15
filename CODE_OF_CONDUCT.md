@@ -2,7 +2,7 @@
 
 ## Our pledge
 
-We want participation in the `brgasr` project to be respectful, constructive,
+We want participation in the `brgast` project to be respectful, constructive,
 and welcoming for everyone.
 
 ## Expected behavior
