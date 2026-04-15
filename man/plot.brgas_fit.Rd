@@ -10,8 +10,8 @@ Plots returns and the fitted conditional scale from a \code{brgas_fit} object.
   dates = NULL,
   returns = NULL,
   break_date = NULL,
-  return_col = "gray35",
-  scale_col = "navy",
+  return_col = "#5C677D",
+  scale_col = "#0B6E4F",
   break_col = "firebrick",
   ...
 )

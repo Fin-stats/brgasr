@@ -4,6 +4,9 @@
 autoregressive score model with Student-t innovations used in our carbon-market
 tail-risk study.
 
+![Fitted conditional scale](man/figures/fit_scale.png)
+![Rolling VaR forecasts](man/figures/var_forecast.png)
+
 The package is intentionally narrow in scope:
 
 - It helps users fit the **core BR-GAS-t model**.
@@ -52,6 +55,15 @@ summary(fit)
 
 forecast_var_es(fit, tau = c(0.10, 0.05, 0.01))
 plot(fit, dates = sample_df$date)
+```
+
+Typical one-step-ahead output on the bundled sample data:
+
+```r
+   tau        var        es
+1 0.10 -0.8668487 -1.249494
+2 0.05 -1.1421138 -1.508267
+3 0.01 -1.7282036 -2.088567
 ```
 
 ## Rolling forecast example

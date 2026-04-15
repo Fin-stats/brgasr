@@ -10,7 +10,8 @@ plot_var_es_forecasts(
   tau,
   model_order = NULL,
   palette = NULL,
-  realized_col = "black",
+  realized_col = "#3A3A3A",
+  breach_col = "#C1121F",
   ...
 )
 }
@@ -20,6 +21,7 @@ plot_var_es_forecasts(
   \item{model_order}{Optional plotting order for model names.}
   \item{palette}{Optional vector of line colors.}
   \item{realized_col}{Color used for realized returns.}
+  \item{breach_col}{Color used for VaR breach markers.}
   \item{...}{Additional graphical arguments.}
 }
 \value{
@@ -27,6 +29,6 @@ The plotted subset of the forecast table, invisibly.
 }
 \examples{
 sample_df <- sample_data()
-roll_out <- roll_brgast(sample_df, win = 250, refit_every = 20, tau = c(0.05, 0.01))
+roll_out <- roll_brgast(sample_df, win = 250, refit_every = 60, tau = c(0.05, 0.01))
 plot_var_es_forecasts(roll_out$forecasts, tau = 0.05)
 }

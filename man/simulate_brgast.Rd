@@ -9,8 +9,8 @@ simulate_brgast(
   n = 600,
   break_at = floor(n * 0.6),
   seed = NULL,
-  params = list(mu = 0, omega = 0.15, a = 0.1, a1 = 0.08, b = 0.93,
-    b1 = -0.1, d1 = 0.2, nu = 7),
+  params = list(mu = 0, omega = -0.12, a = 0.08, a1 = 0.04, b = 0.88,
+    b1 = -0.08, d1 = 0.15, nu = 8),
   start_date = as.Date("2021-01-01")
 )
 }
@@ -24,4 +24,3 @@ simulate_brgast(
 \value{
 A data frame with \code{date}, \code{ret}, and \code{post_break}.
 }
-
