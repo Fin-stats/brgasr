@@ -1,17 +1,17 @@
 map_brgas_params <- function(raw) {
-  a_pre <- exp(raw[3])
-  a_post <- exp(raw[4])
-  b_pre <- tanh(raw[5])
-  b_post <- tanh(raw[6])
+  a_pre <- 0.25 * stats::plogis(raw[3])
+  a_post <- 0.25 * stats::plogis(raw[4])
+  b_pre <- 0.98 * stats::plogis(raw[5])
+  b_post <- 0.98 * stats::plogis(raw[6])
   list(
     mu = raw[1],
-    omega = raw[2],
+    omega = 0.75 * tanh(raw[2]),
     a = a_pre,
     a1 = a_post - a_pre,
     b = b_pre,
     b1 = b_post - b_pre,
-    d1 = raw[7],
-    nu = 2 + exp(raw[8]),
+    d1 = 0.50 * tanh(raw[7]),
+    nu = 3 + exp(raw[8]),
     a_post = a_post,
     b_post = b_post
   )
@@ -74,7 +74,16 @@ fit_brgast <- function(y, indicator, start = NULL) {
   indicator <- validated$indicator
   var_y <- max(stats::var(y), 1e-6)
   if (is.null(start)) {
-    start <- c(mean(y), log(var_y), log(0.06), log(0.10), atanh(0.95), atanh(0.90), 0, log(8 - 2))
+    start <- c(
+      mean(y),
+      0,
+      stats::qlogis(0.08 / 0.25),
+      stats::qlogis(0.12 / 0.25),
+      stats::qlogis(0.88 / 0.98),
+      stats::qlogis(0.82 / 0.98),
+      0,
+      log(8 - 3)
+    )
   }
 
   objective <- function(raw) {

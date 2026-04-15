@@ -7,13 +7,13 @@ simulate_brgast <- function(n = 600,
                             seed = NULL,
                             params = list(
                               mu = 0.00,
-                              omega = 0.15,
-                              a = 0.10,
-                              a1 = 0.08,
-                              b = 0.93,
-                              b1 = -0.10,
-                              d1 = 0.20,
-                              nu = 7.00
+                              omega = -0.12,
+                              a = 0.08,
+                              a1 = 0.04,
+                              b = 0.88,
+                              b1 = -0.08,
+                              d1 = 0.15,
+                              nu = 8.00
                             ),
                             start_date = as.Date("2021-01-01")) {
   if (!is.null(seed)) {
