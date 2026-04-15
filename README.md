@@ -8,7 +8,7 @@ The package is intentionally narrow in scope:
 
 - It helps users fit the **core BR-GAS-t model**.
 - It supports **one-step-ahead VaR and ES forecasting**.
-- It includes a **small bundled sample dataset** so users can try the model
+- It includes a **bundled 10-year sample dataset** so users can try the model
   immediately.
 - It includes **built-in visualization functions** for fitted scale dynamics and
   VaR forecast paths.
@@ -18,7 +18,7 @@ The package is intentionally narrow in scope:
 ## Current package structure
 
 - `R/` contains the model implementation and helper functions.
-- `inst/extdata/hbea_sample.csv` contains a bundled synthetic sample return series.
+- `inst/extdata/hbea_sample.csv` contains a bundled synthetic 10-year sample return series.
 - `inst/examples/basic_usage.R` shows a complete end-to-end example.
 
 ## Installation
@@ -75,7 +75,7 @@ plot_var_es_forecasts(roll_out$forecasts, tau = 0.05)
 
 ## Sample data
 
-The bundled sample dataset is **synthetic**, not the full research sample. It was
-generated to resemble a heavy-tailed return series with a break-regime change in
-risk dynamics, which makes it suitable for illustrating package usage without
-shipping the full paper data.
+The bundled sample dataset is **synthetic**, not the full research sample. It is
+a 10-year daily-style series generated to resemble a heavy-tailed return process
+with a break-regime change in risk dynamics, which makes it suitable for
+illustrating package usage without shipping the full paper data.

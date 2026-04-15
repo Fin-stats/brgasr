@@ -2,7 +2,8 @@
 \alias{sample_hbea_data}
 \title{Load the Bundled HBEA Sample Dataset}
 \description{
-Loads a bundled synthetic return series designed to illustrate package usage.
+Loads a bundled synthetic 10-year return series designed to illustrate package
+usage.
 }
 \usage{
 sample_hbea_data()
@@ -14,4 +15,3 @@ A data frame with columns \code{date}, \code{ret}, and \code{post_break}.
 sample_df <- sample_hbea_data()
 head(sample_df)
 }
-
