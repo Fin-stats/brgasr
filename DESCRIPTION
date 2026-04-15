@@ -19,9 +19,5 @@ LazyData: false
 RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1.0)
-Suggests:
-    knitr,
-    rmarkdown
 URL: https://github.com/Fin-stats/brgasr
 BugReports: https://github.com/Fin-stats/brgasr/issues
-VignetteBuilder: knitr
