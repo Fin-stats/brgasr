@@ -11,8 +11,7 @@ The package is intentionally narrow in scope:
 
 - It helps users fit the **core BR-GAS-t model**.
 - It supports **one-step-ahead VaR and ES forecasting**.
-- It includes a **10-year sample dataset** so users can try the model
-  immediately.
+- It includes a **10-year demo sample dataset** 
 - It includes **built-in visualization functions** for fitted scale dynamics and
   VaR forecast paths.
 
@@ -20,7 +19,7 @@ The package is intentionally narrow in scope:
 ## Current package structure
 
 - `R/` contains the model implementation and helper functions.
-- `inst/extdata/hbea_sample.csv` contains a 10-year sample return series.
+- `inst/extdata/hbea_sample.csv` contains a 10-year demo sample return series.
 - `inst/examples/basic_usage.R` shows a complete end-to-end example.
 
 ## Installation
